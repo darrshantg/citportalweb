@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script> -->
+    <link rel = "stylesheet" href = "styles.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+    <script src="./node_modules/jsPDF/dist/jspdf.umd.js"></script>
+    <script src="./node_modules/html2canvas/dist/html2canvas.min.js"></script>
+    <script type="module" src="./script.js"></script>
+    <title>Staff portal</title>
+</head>
+<body>
+  <nav class = navbar>
+    <div class = "nav-center">
+      <img src = "./images/logo.jpeg"/>
+      <h2>Staff Portal</h2>
+    </div>
+  </nav>
+  <main class = "page">
+    <div class="container">
+      <form class="Staff-details">
+        <label>Staff ID</label> <input id="staffid" type="text" required>
+        <br>
+        <label>Subject </label> <input id="subject" type="text" required>
+        <br>
+        <label>From Date</label> <input id="date" type="text">
+        <br>
+        <label>To Date</label> <input id="to_date" type="text">
+      </form>
+      <div class="content">
+        <div class="content-actual">
+          <label>Name</label> <input id = "Namebox" type="text">
+          <label>RollNo</label> <input id = "Rollbox" type="text">
+          <label>Section</label> <input id = "Secbox" type="text">
+          <label>Midsem1_marks</label> <input id="mid1box" type="text">
+          <label>Midsem2_marks</label> <input id="mid2box" type="text">
+          <label>assignment_marks</label> <input id="asgbox" type="text">
+          <label>seminar_marks</label> <input id="sembox" type="text">
+          <label>Total_marks</label> <input id="Markbox" type="text">
+          <label>Gender</label>
+          <select id = "Genbox">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <div class="btns">
+            <button id = "insbtn">INSERT</button>
+            <button id = "selbtn">SELECT</button>
+            <button id = "updbtn">UPDATE</button>
+            <button id = "delbtn">DELETE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button id = "attbtn">VIEW ATTENDANCE</button>
+    <button id= "mark">DOWNLOAD INTERNAL MARKS</button>
+    <div id = "tab">
+      
+    </div>
+
+    <button id="pdf">DOWNLOAD ATTENDANCE</button>
+  </main>    
+</body>
+
+
+
+</html>
