@@ -397,7 +397,7 @@ function pdf() {
 function markpdf() {
   const dbref = ref(db);
 
-  get(child(dbref,"Staff/"+ staffbox.value + "/" + subbox.value + "/Internal_marks")).then((snapshot) =>{
+  get(child(dbref,"Staff/"+ staffbox.value + "/" + subbox.value + "/Internals")).then((snapshot) =>{
     if(snapshot.exists()){
       const roll_nos = Object.keys(snapshot.val());   
       const mark_arr = Object.values(snapshot.val());
